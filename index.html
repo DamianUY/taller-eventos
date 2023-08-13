@@ -9,8 +9,15 @@
   </head>
   <body>
     <div id="ElDiv" style="padding: 5px; background-color: green;">
-	   <button type="button" onclick="alert('Hola!')">Saludar</button>
+	   <button id="botoncito" type="button">Saludar</button>
 	</div>
-
+<script>
+        const botoncitoalerta = document.getElementById('botoncito');
+        
+        botoncitoalerta.onclick = function(event) {
+            event.stopPropagation();
+            alert("Button onclick triggered");
+        };
+    </script>
   </body>
 </html>
